@@ -1,0 +1,121 @@
+html, body {
+	font-family: "Arial", Sans-serif;
+	font-size: 21px;
+	color: #444444;
+	margin: 0;
+	padding: 0;
+}
+#wrapper3 {
+	position: relative;
+	width: 860px;
+	height: 600px;
+	margin: 0 auto;
+}
+#niebo{
+	position: absolute;
+	top: 0;
+	width: 860px;
+	height: 425px;
+	background-image: url("img/niebo.png");
+}
+#plot{
+	position: absolute;
+	bottom: 0;
+	width: 860px;
+	height: 350px;
+	background: url("img/plot.png");
+}
+#ogen{
+	position: absolute;
+	bottom: 0;
+	width: 860px;
+	height: 280px;
+	background: url("img/ogen.png");
+}
+.ui-widget-header{
+	position: absolute;
+	bottom: 35px;
+	width: 100px;
+	height: 80px;
+	border: 5px double #fb1782;
+	padding-top: 20px;
+	background-color: white;	
+	text-align: center;
+	font-family: "Arial", Sans-serif;
+}
+#droppable1{
+	left: 25px;
+}
+#droppable2{
+	left: 165px;
+}
+#droppable3{
+	left: 305px;
+}
+#droppable4{
+	left: 445px;
+}
+#droppable5{
+	left: 595px;
+}
+#droppable6{
+	left: 735px;
+}
+
+.draggable{
+	position: absolute;
+	float: left;
+	width: 64px;
+	height: 64px;
+	z-index: 2;
+}
+.ui-state-highlight{
+    border: 5px double #e4fe04;
+    background-color: #f5fd9b;
+}
+.ui-state-highblack{
+    border: 5px double #696060;
+    background-color: #f96e6e;
+}
+
+#draggable1{
+	background-image: url("img/atom.png");
+	color: white;
+	text-align: center;
+	font-size: 24px;
+}
+#draggable6{
+	background-image: url("img/atom.png");
+	color: white;
+	text-align: center;
+	font-size: 24px;
+}
+#draggable3{
+	background-image: url("img/atom.png");
+	color: white;
+	text-align: center;
+	font-size: 24px;
+}
+.draggable p {
+	padding: 15px 0 0 0;
+	margin: 0;
+}
+#score{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	top: 10px;
+	right: 20px;
+	z-index: 3;
+}
+#pkt{
+	position: absolute;
+	top: 10px;
+	right: 55px;
+	z-index: 3;
+	font-family: "Arial", Sans-serif;
+	padding-top: 0px;
+	font-size: 40px;
+	color: #444444;
+	
+}

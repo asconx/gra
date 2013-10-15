@@ -1,0 +1,200 @@
+html, body {
+	font-family: "Arial", Century Gothic, Sans-serif;
+	font-size: 21px;
+	color: black;
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+}
+#wrapper1 {
+	width: 860px;
+	height: 600px;
+	margin: 0 auto;
+	background: url("img/tlo.png") no-repeat bottom center;
+}
+#wrapper2 {
+	position: relative;
+	width: 1024px;
+	height: 600px;
+	margin: 0 auto;
+}
+#tytul{
+	position: relative;
+	top: 26px;
+	left: 275px;
+	margin: 0 auto;
+}
+.nazwa{
+	position: absolute;
+	top: 410px;
+	left: 530px;
+	margin: 0 auto;
+}
+.nick{
+	position: relative;
+	top: 186px;
+	left: 310px;
+	padding: 10px 10px 10px 10px;
+	font-size: 21px;
+	margin: 0 auto;
+}
+#warunek{
+	position: absolute;
+	top: 400px;
+	left: 525px
+}
+.graj{
+	background-image: url("img/graj.png");
+	width: 169px;
+	position: relative;
+	top: 330px;
+	left: 100px;
+	height: 96px;
+	margin: 0 auto;
+}
+td  p{
+ 	font-size: 21px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+ }
+ td {
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 14px;
+ }
+.red{
+	background-color: #fd879a;
+}
+.pink{
+	background-color: #fd87cf;
+}
+.violet{
+	background-color: #af2cec;
+}
+.blue{
+	background-color: #09a1f8;
+}
+.oceanic{
+	background-color: #92f1f2;
+}
+.gren{
+	background-color: #b3f653;
+}
+.yellow{
+	background-color: #e4f96f;
+}
+.orange{
+	background-color: #f0c338;
+}
+.lantan{
+	background-color: #eef038;
+}
+.aktyn{
+	background-color: #49f038;
+}
+.szary{
+	background-color: #d1e7e9;
+}
+.ciecz{
+	background-color: #ffa635;
+}
+#t1{
+	position: absolute;
+	top: 80px;
+	left: 0;
+}
+#t2{
+	position: absolute;
+	top: 80px;
+	right: 2px;;
+}
+#t3{
+	position: absolute;
+	top: 137px;
+	left: 0
+}
+#t4{
+	position: absolute;
+	top: 135px;
+	right: 0px; 
+}
+#t5{
+	position: absolute;
+	top: 250px;
+}
+#menu {
+	position: absolute;
+	top: 5px;
+	left: 150px;
+	line-height: 25px;
+}
+ a {
+	text-decoration: none;	
+	color: black;
+}
+#b1{
+	width:60px;
+	height: 85px;
+	padding: 5px 10px 5px 10px;
+	font-size: 16px;
+	background-color: #f4f4f4;
+	border: 1px solid #c6cecf;
+}
+#b1:hover {
+	background-color: #f3fcfd;
+	border: 1px solid #cfe6e9;
+}
+#arrowright{
+	position: absolute;
+	right: 10px;
+	top: 480px;
+}
+#arrowleft{
+	position: absolute;
+	left: 10px;
+	top: 480px;
+}
+#legenda{
+	position: absolute;
+	left: 10px;
+	top: 480px;
+	font-size: 16px;
+}
+.box1{
+	background-color: #b3f653;
+}
+.box2{
+	background-color: #fd87cf;
+}
+.box3{
+	background-color: #92f1f2;
+}
+.box4{
+	background-color: #af2cec;
+}
+.box5{
+	background-color: #49f038;
+}
+.box6{
+	background-color: #e4f96f;
+}
+.box7{
+	background-color: #fd879a;
+}
+.box8{
+	background-color: #09a1f8;
+}
+.box9{
+	background-color: #f0c338;
+}
+.box10{
+	background-color: #eef038;
+}
+
+
+
+
+

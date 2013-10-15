@@ -1,0 +1,58 @@
+<html>
+		<head>
+			<title>Refeks Mandelejewa</title>
+			<meta charset="utf-8" />	
+			<link media="all" type="text/css" href="style1.css" rel="stylesheet">
+			<script type="text/javascript" src="j.js"></script>
+			<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>	
+			<script type="text/javascript">
+			$(document).ready(function() 
+			{
+				$('input:text').bind(
+				{
+					focus: function()
+					{
+						if($(this).val() == 'PODAJ NICK')  $(this).val('');
+					},
+					blur: function()
+					{
+						if($(this).val() == '') $(this).val('PODAJ NICK');
+					}
+				});
+				
+				$('#graj').click(function() {
+					var dataValid = true;
+					
+					$('#playerError').html('');
+					if ($.trim($('#playerName').val()) == 'PODAJ NICK')
+					{
+						$('#playerError').html('To pole jest wymagane');
+						dataValid = false;
+						return false;
+					}
+					
+					if ( !(/.*\d.*\d.*\d/).test($('#playerName').val()) )
+					{
+						$('#playerError').html('Wprowadź co najmniej 3 cyfry');
+						dataValid = false;
+					}
+					
+					if(dataValid)
+					{
+					document.location.href="uklad.php?nick="+$.trim($('#playerName').val());
+					}
+				});
+				
+			});
+			</script>
+		</head>
+	<body>
+	<div id="wrapper1">
+	
+	<div id="tytul"><img src="img/tytul.png" alt="" /></div>
+	<input id="playerName" type="text" class="nick number" name="nick"/>
+	<span id="playerError" class="nazwa" ></span>
+	<input type="button" id="graj" class="graj" name="graj" />
+	</div>
+	</body>
+</html>

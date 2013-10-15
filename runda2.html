@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Refeks Mandelejewa</title>
+		<meta charset="utf-8" />
+		<link media="all" type="text/css" href="style2.css" rel="stylesheet">
+		<script type="text/javascript" src="j.js"></script>
+		<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>	
+		<script type="text/javascript">
+			window.score = 0;
+			window.atom = [ 'Se', 'C', 'O', 'S', 'P', 'H', 'N', 'He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'F', 'Cl', 'Br', 'I', 'At', 'B', 'Si', 'Ge', 'As', 'Sb', 'Te', 'Po', 
+			'Al', 'Ga', 'In', 'Sn', 'Tl', 'Pb', 'Bi', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Ag', 'Cd', 'Hf', 'Ta',
+			 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra', 'La', 'Ac'];
+			window.atomId = 0;
+			function frame1() {
+			 
+				$.each($( ".draggable" ), function(k, v) {
+					var top = $(v).position().top + 1;  // update parameters
+					 //console.log(top);
+					$(v).css('top', top);// show frame
+				 
+					if (top >= 550) { // check finish condition
+					  $(v).css({'top': 0, 'left':Math.random()*700 });
+					  window.atomId=Math.round(window.atom.length*Math.random(),0);
+					   if(window.atomId>window.atom.length-1) {
+						window.atomId=0;
+					   }
+					   $(v).html('<p>'+window.atom[window.atomId]+'</p>');
+					   
+					}
+				});
+				
+			}
+			
+			 
+
+		
+		$(document).ready(function() {
+			setInterval(function() { frame1(); }, 15); // draw every 10ms
+		});
+		
+		
+			$(function() {
+			$( "#draggable1" ).draggable();
+			$( "#droppable1" ).droppable({
+			drop: function( event, ui ) {          
+			   
+			   pierwiastek = $(ui.draggable).find('p').html();
+			   
+			   dobrze = false;
+			   if(pierwiastek == 'B') { dobrze = true; }
+			   if(pierwiastek == 'Ga') { dobrze = true; }
+			   if(pierwiastek == 'In') { dobrze = true; }
+			   if(pierwiastek == 'S') { dobrze = true; }
+			   if(pierwiastek == 'P') { dobrze = true; }
+			   if(pierwiastek == 'I') { dobrze = true; }
+			   if(pierwiastek == 'Na') { dobrze = true; }
+			   if(pierwiastek == 'K') { dobrze = true; }
+			   if(pierwiastek == 'Rb') { dobrze = true; }
+			   if(pierwiastek == 'Cs') { dobrze = true; }
+			   if(pierwiastek == 'Fr') { dobrze = true; }
+			   
+			   
+			   if(dobrze) {
+				$( this ).addClass( "ui-state-highlight" );
+				window.score+=10;
+				$('#pkt').html(window.score);
+			   } else {
+			   $( this ).addClass( "ui-state-highblack" );
+			   window.score-=10;
+				$('#pkt').html(window.score);
+			   }
+
+			   
+			   //zwieksz licznik + przestaw kulke
+			   setTimeout(function() {
+			    $( ".ui-state-highlight" ).removeClass( "ui-state-highlight" );
+				$( ".ui-state-highblack" ).removeClass( "ui-state-highblack" );
+			   }, 1000);
+			}
+			});
+			});
+			
+			$(function() {
+			$( "#draggable1" ).draggable();
+			$( "#droppable2" ).droppable({
+			drop: function( event, ui ) {
+			
+			pierwiastek = $(ui.draggable).find('p').html();
+			
+			   dobrze = false;
+			   if(pierwiastek == 'Zn') { dobrze = true; }
+			   if(pierwiastek == 'Cd') { dobrze = true; }
+			   if(pierwiastek == 'Tl') { dobrze = true; }
+			   if(pierwiastek == 'Sn') { dobrze = true; }
+			   if(pierwiastek == 'Pb') { dobrze = true; }
+			   if(pierwiastek == 'Bi') { dobrze = true; }
+			   if(pierwiastek == 'Po') { dobrze = true; }
+			   if(pierwiastek == 'Te') { dobrze = true; }
+			   if(pierwiastek == 'Se') { dobrze = true; }
+			   if(pierwiastek == 'At') { dobrze = true; }
+			   
+			   if(dobrze) {
+				$( this ).addClass( "ui-state-highlight" );
+				window.score+=10;
+				$('#pkt').html(window.score);
+			   } else {
+			   $( this ).addClass( "ui-state-highblack" );
+			   window.score-=10;
+				$('#pkt').html(window.score);
+			   }
+			   setTimeout(function() {
+			    $( ".ui-state-highlight" ).removeClass( "ui-state-highlight" );
+				$( ".ui-state-highblack" ).removeClass( "ui-state-highblack" );
+			   }, 1000);
+			}
+			});
+			});			
+			
+			$(function() {
+			$( "#draggable3" ).draggable();
+			$( "#droppable3" ).droppable({
+			drop: function( event, ui ) {
+				
+			pierwiastek = $(ui.draggable).find('p').html();
+			
+			   dobrze = false;
+			   if(pierwiastek == 'Mg') { dobrze = true; }
+			   if(pierwiastek == 'Ca') { dobrze = true; }
+			   if(pierwiastek == 'Sr') { dobrze = true; }
+			   if(pierwiastek == 'Ba') { dobrze = true; }
+			   if(pierwiastek == 'Ra') { dobrze = true; }
+				if(pierwiastek == 'Al') { dobrze = true; }
+				if(pierwiastek == 'As') { dobrze = true; }
+				if(pierwiastek == 'Sb') { dobrze = true; }
+   
+			   if(dobrze) {
+				$( this ).addClass( "ui-state-highlight" );
+				window.score+=10;
+				$('#pkt').html(window.score);
+			   } else {
+			   $( this ).addClass( "ui-state-highblack" );
+			   window.score-=10;
+				$('#pkt').html(window.score);
+			   }
+			   setTimeout(function() {
+			    $( ".ui-state-highlight" ).removeClass( "ui-state-highlight" );
+				$( ".ui-state-highblack" ).removeClass( "ui-state-highblack" );
+			   }, 1000);
+			}
+			});
+			});
+
+			$(function() {
+			$( "#draggable3" ).draggable();
+			$( "#droppable4" ).droppable({
+			drop: function( event, ui ) {
+			  				
+			pierwiastek = $(ui.draggable).find('p').html();
+			
+			   dobrze = false;
+			   if(pierwiastek == 'Be') { dobrze = true; }
+			   if(pierwiastek == 'La') { dobrze = true; }
+			   if(pierwiastek == 'Ac') { dobrze = true; }
+			   if(pierwiastek == 'Cu') { dobrze = true; }
+			   if(pierwiastek == 'Ag') { dobrze = true; }
+			   if(pierwiastek == 'Au') { dobrze = true; }
+			   if(pierwiastek == 'Ge') { dobrze = true; }
+			   
+			   
+			   if(dobrze) {
+				$( this ).addClass( "ui-state-highlight" );
+				window.score+=10;
+				$('#pkt').html(window.score);
+			   } else {
+			   $( this ).addClass( "ui-state-highblack" );
+			   window.score-=10;
+				$('#pkt').html(window.score);
+			   }
+			   setTimeout(function() {
+			    $( ".ui-state-highlight" ).removeClass( "ui-state-highlight" );
+				$( ".ui-state-highblack" ).removeClass( "ui-state-highblack" );
+			   }, 1000);
+			}
+			});
+			});
+
+			$(function() {
+			$( "#draggable6" ).draggable();
+			$( "#droppable5" ).droppable({
+			drop: function( event, ui ) {
+			
+			pierwiastek = $(ui.draggable).find('p').html();
+			
+			   dobrze = false;
+			   if(pierwiastek == 'Sc') { dobrze = true; }
+			   if(pierwiastek == 'Ti') { dobrze = true; }
+			   if(pierwiastek == 'V') { dobrze = true; }
+			   if(pierwiastek == 'Cr') { dobrze = true; }
+			   if(pierwiastek == 'Y') { dobrze = true; }
+			   if(pierwiastek == 'Zr') { dobrze = true; }
+			   if(pierwiastek == 'Co') { dobrze = true; }
+			   if(pierwiastek == 'Pd') { dobrze = true; }
+			   if(pierwiastek == 'Pt') { dobrze = true; }
+			   if(pierwiastek == 'Si') { dobrze = true; }
+			   
+			   if(dobrze) {
+				$( this ).addClass( "ui-state-highlight" );
+				window.score+=10;
+				$('#pkt').html(window.score);
+			   } else {
+			   $( this ).addClass( "ui-state-highblack" );
+			   window.score-=10;
+				$('#pkt').html(window.score);
+			   }
+			   setTimeout(function() {
+			    $( ".ui-state-highlight" ).removeClass( "ui-state-highlight" );
+				$( ".ui-state-highblack" ).removeClass( "ui-state-highblack" );
+			   }, 1000);
+			}
+			});
+			});
+
+			$(function() {
+			$( "#draggable6" ).draggable();
+			$( "#droppable6" ).droppable({
+			drop: function( event, ui ) {
+			
+			pierwiastek = $(ui.draggable).find('p').html();
+			
+			   dobrze = false;
+			   if(pierwiastek == 'Nb') { dobrze = true; }
+			   if(pierwiastek == 'Mo') { dobrze = true; }
+			   if(pierwiastek == 'Tc') { dobrze = true; }
+			   if(pierwiastek == 'Ru') { dobrze = true; }
+			   if(pierwiastek == 'Hf') { dobrze = true; }
+			   if(pierwiastek == 'Ta') { dobrze = true; }
+			   if(pierwiastek == 'W') { dobrze = true; }
+			   if(pierwiastek == 'Re') { dobrze = true; }
+			   if(pierwiastek == 'Os') { dobrze = true; }
+			   if(pierwiastek == 'B') { dobrze = true; }
+			   if(pierwiastek == 'C') { dobrze = true; }
+			   
+			   
+			   if(dobrze) {
+				$( this ).addClass( "ui-state-highlight" );
+				window.score+=10;
+				$('#pkt').html(window.score);
+			   } else {
+			   $( this ).addClass( "ui-state-highblack" );
+			   window.score-=10;
+				$('#pkt').html(window.score);
+			   }
+			   setTimeout(function() {
+			    $( ".ui-state-highlight" ).removeClass( "ui-state-highlight" );
+				$( ".ui-state-highblack" ).removeClass( "ui-state-highblack" );
+			   }, 1000);
+			}
+			});
+			});			
+		</script>	
+	</head>
+	<body>
+		<div id="wrapper3">
+		
+			<div id="niebo">
+			
+				<marquee behavior="scroll" 
+				direction="left" 
+				style="
+				position:absolute;
+				border:0px;
+				padding:0px;
+				margin:0px;
+				left:0px;
+				top:10px;
+				width:860px;
+				height:170px;
+				z-index:1;" 
+				scrollamount="6">
+				<span class="falling1">
+				<img src="img/chmurki.png" /></span>
+				</marquee>
+
+				<marquee behavior="scroll" 
+				direction="left" 
+				style="
+				position:absolute;
+				border:0px;
+				padding:0px;
+				margin:0px;
+				left:0px;
+				top:100px;
+				width: 860px;
+				height:170px;
+				" 
+				scrollamount="2">
+				<span class="falling2">
+				<img src="img/obloki.png" /></span>
+				</marquee>
+			
+				<div  id="draggable1" class="draggable" class="ui-widget-content" ><p>H</p></div>
+				<div  id="draggable6" class="draggable" class="ui-widget-content" style="left: 400px;" ><p>Se</p></div>
+				<div  id="draggable3" class="draggable" class="ui-widget-content" style="left: 200px;" ><p>Au</p></div>
+				<div  id="score"><img src="img/score.png" /><p id="pkt">0</p></div>
+			</div>
+			
+			
+			
+			<div id="ogen">		
+				<div class="ui-widget-header" id="droppable1">0-200°C</div>
+				<div class="ui-widget-header" id="droppable2">200-</br>500°C</div>
+				<div class="ui-widget-header" id="droppable3">500-</br>900°C</div>
+				<div class="ui-widget-header" id="droppable4">900-</br>1300°C</div>
+				<div class="ui-widget-header" id="droppable5">1300-</br>2000°C</div>
+				<div class="ui-widget-header" id="droppable6">2000-</br>3600°C</div>
+			</div>
+		</div>
+		
+	
+	</body>
+</html>
